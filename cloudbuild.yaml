@@ -1,16 +1,8 @@
-steps:
-  # Build the container image
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/mm-1-417011/my-image', '.']
-  # Push the container image to Container Registry
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/mm-1-417011/my-image']
-  # Deploy the container image to Cloud Run
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args:
-      - 'run'
-      - 'deploy'
-      - 'service-373187739499@cloudbuild.gserviceaccount.com'
-      - '--image=gcr.io/mm-1-417011/my-image'
-      - '--region=us-central1'
-logsBucket: new-cloudbuild-bucket
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+    - 'run'
+    - 'deploy'
+    - 'my-cloudrun-service'  # Replace 'my-cloudrun-service' with your desired service name
+    - '--image=gcr.io/mm-1-417011/my-image'
+    - '--region=us-central1'
+logsBucket: 'new-cloudbuild-bucket'
