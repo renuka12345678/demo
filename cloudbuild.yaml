@@ -8,4 +8,3 @@ steps:
       - '--region=us-central1'
 options:
   logging: CLOUD_LOGGING_ONLY
-logsBucket: 'new-cloudbuild-bucket'
