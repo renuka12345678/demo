@@ -1,0 +1,12 @@
+{
+  "name": "mm-1",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "new-webapp.html",
+  "scripts": {
+    "start": "new-webapp.html",
+    "build": "echo 'Build script placeholder'"
+  },
+  "author": "renuka",
+  "license": "ISC"
+}
