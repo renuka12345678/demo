@@ -2,9 +2,9 @@
   "name": "mm-1",
   "version": "1.0.0",
   "description": "Your project description",
-  "main": "new-webapp.html",
+  "main": "index.html",
   "scripts": {
-    "start": "new-webapp.html",
+    "start": "index.html",
     "build": "echo 'Build script placeholder'"
   },
   "author": "renuka",
