@@ -1,8 +1,11 @@
-- name: 'gcr.io/cloud-builders/gcloud'
-  args:
-    - 'run'
-    - 'deploy'
-    - 'my-cloudrun-service'  # Replace 'my-cloudrun-service' with your desired service name
-    - '--image=gcr.io/mm-1-417011/my-image'
-    - '--region=us-central1'
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'my-cloudrun-service'  # Replace 'my-cloudrun-service' with your desired service name
+      - '--image=gcr.io/mm-1-417011/my-image'
+      - '--region=us-central1'
+options:
+  logging: CLOUD_LOGGING_ONLY
 logsBucket: 'new-cloudbuild-bucket'
