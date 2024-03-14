@@ -13,6 +13,8 @@ steps:
       - 'service-373187739499@cloudbuild.gserviceaccount.com'
       - '--image=gcr.io/mm-1-417011/my-image'
       - '--region=us-central1'
+
 options:
   logging: CLOUD_LOGGING_ONLY
-  logsBucket: 'new-cloudbuild-bucket'
+  build:
+    logsBucket: 'new-cloudbuild-bucket'
